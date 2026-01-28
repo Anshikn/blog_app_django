@@ -15,7 +15,7 @@
     padding: 20px;
     
 }
-/* .containerr{
+.containerr{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     padding: 50px;
     border-radius: 25px;
     
-} */
+}
 .blog-form{
     display: flex;
     justify-content: center;
@@ -46,6 +46,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    border:  1px solid black;
+    margin: 3px;
+    padding: 4px;
 
 }
 /* .h22{
