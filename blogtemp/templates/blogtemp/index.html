@@ -28,25 +28,39 @@
     <form method="post" action="{% url 'edit_blog' blog.id %}">
                 {% csrf_token %}
         <!-- <h3 class="h22">{{ blog.title }}</h3> -->
+         <div>
+         <label>Author</label>
+         <p>{{ blog.user.username }}</p>
+         </div>
+         <div>
+        <label>Title</label>
          <input type="text" name="title" value="{{ blog.title }}" >
+         </div>
+         <div>
         <!-- <p>{{ blog.body }}</p> -->
+        <label>Body</label>
         <textarea name="body" > {{ blog.body }}</textarea>
+        </div>
+        <!-- {% if blog.user == user %} -->
         <button name="edit">Edit</button>
         </form>
         <form method ="post" action="{% url 'delete_blog' blog.id %}">
               {% csrf_token %}
               <button name="delete">Delete</button>      
         </form>
+     <!-- {% endif %}    -->
     {% endfor %}
+    
     </div>
 </div>
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>    {% else %}
+<!-- <form action="{% url 'logout' %}" method="post">
+  {% csrf_token %} -->
+  <button type="submit" ><a href="{% url 'logout' %}">Log Out</a></button>
+<!-- </form>    -->
+ {% else %}
     <a href="{% url 'login' %}">Login</a>
     <a href="{% url 'signup' %}">Register</a>
-    {% endif %}
+{% endif %}
 
 </body>
 </html> 

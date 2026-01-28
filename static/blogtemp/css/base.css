@@ -2,10 +2,6 @@
     background-color: aquamarine;
 } */
 
-*{
-    /* padding: 0;
-    margin: 0; */
-}
 .heading{
     text-align: center;
 }
@@ -19,7 +15,7 @@
     padding: 20px;
     
 }
-.containerr{
+/* .containerr{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +24,7 @@
     padding: 50px;
     border-radius: 25px;
     
-}
+} */
 .blog-form{
     display: flex;
     justify-content: center;
